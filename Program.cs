@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using BasicTournament_System.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<BasicTournament_SystemContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("BasicTournament_SystemContext") ?? throw new InvalidOperationException("Connection string 'BasicTournament_SystemContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
