@@ -3,6 +3,7 @@ using System;
 using BasicTournament_System.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BasicTournament_System.Migrations
 {
     [DbContext(typeof(BasicTournament_SystemContext))]
-    partial class BasicTournament_SystemContextModelSnapshot : ModelSnapshot
+    [Migration("20231105212741_NewUpdatesClass")]
+    partial class NewUpdatesClass
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

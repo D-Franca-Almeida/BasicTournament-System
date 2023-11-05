@@ -30,6 +30,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Campeonatoes}/{action=Index}/{id?}"); //Chama a página "HOME" ou página de abertura
 
 app.Run();

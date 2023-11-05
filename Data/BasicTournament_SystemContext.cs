@@ -14,6 +14,13 @@ namespace BasicTournament_System.Data
         {
         }
 
-        public DbSet<BasicTournament_System.Models.Campeonato> Campeonato { get; set; } = default!;
+        public DbSet<Campeonato> Campeonato { get; set; } = default!;
+        public DbSet<Atleta> Atleta { get; set; } = default!;
+        public DbSet<ChaveLuta> ChaveLuta { get; set; } = default!;
+        public DbSet<Resultados> Resultados { get; set; } =default!;
+        
+
+
+
     }
 }
